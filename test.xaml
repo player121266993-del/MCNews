@@ -13,7 +13,7 @@
             <Path Grid.Column="0" Width="14" Height="14" Stretch="Uniform" Fill="#555555" Margin="0,0,8,0" VerticalAlignment="Center" 
                   Data="M117 170v683h790V170H117z m705 598H202V255h620v513z M287 341h450v85H287v-85z m0 171h450v85H287v-85z" />
             
-            <TextBlock Grid.Column="1" Text="欢迎使用新闻主页！！！！！" FontSize="13" Foreground="#444444" VerticalAlignment="Center" />
+            <TextBlock Grid.Column="1" Text="欢迎使用新闻主页..." FontSize="13" Foreground="#444444" VerticalAlignment="Center" />
             <TextBlock Grid.Column="3" Text="最后更新：2026-05-06 01:57:49" FontSize="12" Foreground="#888888" VerticalAlignment="Center" Margin="0,0,12,0" />
             
             <local:MyIconButton Grid.Column="4" Width="22" Height="22" VerticalAlignment="Center" 
