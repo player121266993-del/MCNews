@@ -1,0 +1,318 @@
+<StackPanel>
+    <!-- 顶部欢迎栏 -->
+    <Border Background="#E6F2FF" BorderBrush="#BBDDFF" BorderThickness="1" CornerRadius="4" Margin="0,0,0,15" Padding="12,10">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" /> 
+                <ColumnDefinition Width="Auto" /> 
+                <ColumnDefinition Width="*" />    
+                <ColumnDefinition Width="Auto" /> 
+                <ColumnDefinition Width="Auto" /> 
+            </Grid.ColumnDefinitions>
+
+            <Path Grid.Column="0" Width="14" Height="14" Stretch="Uniform" Fill="#555555" Margin="0,0,8,0" VerticalAlignment="Center" 
+                  Data="M117 170v683h790V170H117z m705 598H202V255h620v513z M287 341h450v85H287v-85z m0 171h450v85H287v-85z" />
+            
+            <TextBlock Grid.Column="1" Text="欢迎使用新闻主页" FontSize="13" Foreground="#444444" VerticalAlignment="Center" />
+            <TextBlock Grid.Column="3" Text="最后更新：2026-05-06 01:57:49" FontSize="12" Foreground="#888888" VerticalAlignment="Center" Margin="0,0,12,0" />
+            
+            <local:MyIconButton Grid.Column="4" Width="22" Height="22" VerticalAlignment="Center" 
+                                ToolTip="手动刷新页面" EventType="刷新页面" EventData="-" LogoScale="0.9" 
+                                Foreground="#777777"
+                                Logo="M512 85.333c-235.648 0-426.667 191.019-426.667 426.667h128c0-164.95 133.717-298.667 298.667-298.667 164.95 0 298.667 133.717 298.667 298.667 0 164.95-133.717 298.667-298.667 298.667-73.728 0-141.227-26.667-193.365-71l90.965-90.966H128v281.6l106.88-106.88c69.163 60.117 158.421 96.555 255.787 96.555 235.648 0 426.667-191.019 426.667-426.667S747.648 85.333 512 85.333z" />
+        </Grid>
+    </Border>
+
+    <local:MyCard Margin="0,0,0,15">
+        <StackPanel Margin="25,25,23,20">
+
+            <StackPanel Margin="0,4">
+                <Grid Margin="0,0,0,6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text=" 基岩版 " Background="#3C9D40" Foreground="#FFFFFF" FontSize="13" Margin="0,0,8,0" VerticalAlignment="Center" />
+                    <TextBlock Grid.Column="1" Text="Minecraft 基岩版 26.20 发布" FontSize="16" FontWeight="Bold" Foreground="#333333" VerticalAlignment="Center" TextTrimming="CharacterEllipsis" Margin="0,0,8,0" />
+                    <TextBlock Grid.Column="2" Text="2026-05-06" FontSize="13" Foreground="#999999" VerticalAlignment="Center" />
+                </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    
+                    <TextBlock Grid.Column="0" Foreground="#666666" FontSize="13" TextTrimming="CharacterEllipsis" Text="加入字幕功能，加入混沌立方的实验性功能" VerticalAlignment="Center" Margin="0,0,12,0" />
+                    
+                    <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
+                        <!-- 标准 24x24 弹窗按钮，配置为正确的 EventData -->
+                        <local:MyIconButton Width="24" Height="24" Margin="0,0,4,0" ToolTip="点击展开详情" EventType="弹出窗口" EventData="Minecraft 基岩版 26.20 发布|加入字幕功能，加入混沌立方的实验性功能" LogoScale="0.9" Foreground="#777777" Logo="M512 85.333c-235.648 0-426.667 191.019-426.667 426.667s191.019 426.667 426.667 426.667 426.667-191.019 426.667-426.667S747.648 85.333 512 85.333z m0 768c-188.514 0-341.333-152.819-341.333-341.333s152.819-341.333 341.333-341.333 341.333 152.819 341.333 341.333-152.819 341.333-341.333 341.333z m42.667-469.333h-85.334v-85.333h85.334v85.333z m0 341.333h-85.334V469.333h85.334v341.333z" />
+                        <local:MyIconButton Width="24" Height="24" ToolTip="在 Minecraft 中文 Wiki 中查看" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E5%9F%BA%E5%B2%A9%E7%89%8826.20" LogoScale="0.9" Foreground="#3288E6" Logo="M853.333 597.333v256c0 47.125-38.208 85.334-85.333 85.334H256c-47.125 0-85.333-38.209-85.333-85.334V341.333c0-47.125 38.208-85.333 85.333-85.333h256v85.333H256v512h512V597.333h85.333zM768 170.667v85.333h-174.933L840.533 503.467l-60.333 60.333L432.667 216.333V384H341.333V170.667H768z" />
+                    </StackPanel>
+                </Grid>
+            </StackPanel>
+            <TextBlock Height="1" Background="#EEEEEE" Margin="0,8,0,8" />
+
+            <StackPanel Margin="0,4">
+                <Grid Margin="0,0,0,6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text=" Java版 " Background="#EE1B2E" Foreground="#FFFFFF" FontSize="13" Margin="0,0,8,0" VerticalAlignment="Center" />
+                    <TextBlock Grid.Column="1" Text="Minecraft Java版 26.2 快照 6 发布，混沌立方特性更新完毕" FontSize="16" FontWeight="Bold" Foreground="#333333" VerticalAlignment="Center" TextTrimming="CharacterEllipsis" Margin="0,0,8,0" />
+                    <TextBlock Grid.Column="2" Text="2026-05-06" FontSize="13" Foreground="#999999" VerticalAlignment="Center" />
+                </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    
+                    <TextBlock Grid.Column="0" Foreground="#666666" FontSize="13" TextTrimming="CharacterEllipsis" Text="加入两类硫方怪的物理原型：慢速弹跳与高温，新成就“啊哦”（Uh Oh）使用硫方怪吸收TNT解锁。地表的硫黄涌泉被重新设计，硫黄洞穴不再生成凝灰岩与花岗岩。" VerticalAlignment="Center" Margin="0,0,12,0" />
+                    
+                    <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
+                        <!-- 标准 24x24 弹窗按钮，配置为正确的 EventData -->
+                        <local:MyIconButton Width="24" Height="24" Margin="0,0,4,0" ToolTip="点击展开详情" EventType="弹出窗口" EventData="Minecraft Java版 26.2 快照 6 发布，混沌立方特性更新完毕|加入两类硫方怪的物理原型：慢速弹跳与高温，新成就“啊哦”（Uh Oh）使用硫方怪吸收TNT解锁。地表的硫黄涌泉被重新设计，硫黄洞穴不再生成凝灰岩与花岗岩。" LogoScale="0.9" Foreground="#777777" Logo="M512 85.333c-235.648 0-426.667 191.019-426.667 426.667s191.019 426.667 426.667 426.667 426.667-191.019 426.667-426.667S747.648 85.333 512 85.333z m0 768c-188.514 0-341.333-152.819-341.333-341.333s152.819-341.333 341.333-341.333 341.333 152.819 341.333 341.333-152.819 341.333-341.333 341.333z m42.667-469.333h-85.334v-85.333h85.334v85.333z m0 341.333h-85.334V469.333h85.334v341.333z" />
+                    </StackPanel>
+                </Grid>
+            </StackPanel>
+            <TextBlock Height="1" Background="#EEEEEE" Margin="0,8,0,8" />
+
+            <StackPanel Margin="0,4">
+                <Grid Margin="0,0,0,6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text=" 视频 " Background="#16A085" Foreground="#FFFFFF" FontSize="13" Margin="0,0,8,0" VerticalAlignment="Center" />
+                    <TextBlock Grid.Column="1" Text="Minecraft 发布了新视频：他在 Minecraft 中徒步行走了 14 年" FontSize="16" FontWeight="Bold" Foreground="#333333" VerticalAlignment="Center" TextTrimming="CharacterEllipsis" Margin="0,0,8,0" />
+                    <TextBlock Grid.Column="2" Text="2026-05-03" FontSize="13" Foreground="#999999" VerticalAlignment="Center" />
+                </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    
+                    <TextBlock Grid.Column="0" Foreground="#666666" FontSize="13" TextTrimming="CharacterEllipsis" Text="官方频道最新发布了一则震撼纪录片，讲述了国外硬核玩家不使用任何交通工具，纯靠双脚耗时 14 年成功抵达边境之地的传奇历程。" VerticalAlignment="Center" Margin="0,0,12,0" />
+                    
+                    <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
+                        <!-- 标准 24x24 弹窗按钮，配置为正确的 EventData -->
+                        <local:MyIconButton Width="24" Height="24" Margin="0,0,4,0" ToolTip="点击展开详情" EventType="弹出窗口" EventData="Minecraft 发布了新视频：他在 Minecraft 中徒步行走了 14 年|官方频道最新发布了一则震撼纪录片，讲述了国外硬核玩家不使用任何交通工具，纯靠双脚耗时 14 年成功抵达边境之地的传奇历程。" LogoScale="0.9" Foreground="#777777" Logo="M512 85.333c-235.648 0-426.667 191.019-426.667 426.667s191.019 426.667 426.667 426.667 426.667-191.019 426.667-426.667S747.648 85.333 512 85.333z m0 768c-188.514 0-341.333-152.819-341.333-341.333s152.819-341.333 341.333-341.333 341.333 152.819 341.333 341.333-152.819 341.333-341.333 341.333z m42.667-469.333h-85.334v-85.333h85.334v85.333z m0 341.333h-85.334V469.333h85.334v341.333z" />
+                        <local:MyIconButton Width="24" Height="24" ToolTip="观看视频" EventType="打开网页" EventData="https://www.bilibili.com/" LogoScale="0.9" Foreground="#3288E6" Logo="M853.333 597.333v256c0 47.125-38.208 85.334-85.333 85.334H256c-47.125 0-85.333-38.209-85.333-85.334V341.333c0-47.125 38.208-85.333 85.333-85.333h256v85.333H256v512h512V597.333h85.333zM768 170.667v85.333h-174.933L840.533 503.467l-60.333 60.333L432.667 216.333V384H341.333V170.667H768z" />
+                    </StackPanel>
+                </Grid>
+            </StackPanel>
+            <TextBlock Height="1" Background="#EEEEEE" Margin="0,8,0,8" />
+
+            <StackPanel Margin="0,4">
+                <Grid Margin="0,0,0,6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text=" 电影 " Background="#8E44AD" Foreground="#FFFFFF" FontSize="13" Margin="0,0,8,0" VerticalAlignment="Center" />
+                    <TextBlock Grid.Column="1" Text="《我的世界大电影2》已在新西兰开拍，首批片场照曝光" FontSize="16" FontWeight="Bold" Foreground="#333333" VerticalAlignment="Center" TextTrimming="CharacterEllipsis" Margin="0,0,8,0" />
+                    <TextBlock Grid.Column="2" Text="2026-05-01" FontSize="13" Foreground="#999999" VerticalAlignment="Center" />
+                </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    
+                    <TextBlock Grid.Column="0" Foreground="#666666" FontSize="13" TextTrimming="CharacterEllipsis" Text="真人版续作正式开机！除了原班人马回归，最新泄露的片场实拍照片中还隐约出现了末地传送门与全新神秘角色的身影。" VerticalAlignment="Center" Margin="0,0,12,0" />
+                    
+                    <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
+                        <!-- 标准 24x24 弹窗按钮，配置为正确的 EventData -->
+                        <local:MyIconButton Width="24" Height="24" Margin="0,0,4,0" ToolTip="点击展开详情" EventType="弹出窗口" EventData="《我的世界大电影2》已在新西兰开拍，首批片场照曝光|真人版续作正式开机！除了原班人马回归，最新泄露的片场实拍照片中还隐约出现了末地传送门与全新神秘角色的身影。" LogoScale="0.9" Foreground="#777777" Logo="M512 85.333c-235.648 0-426.667 191.019-426.667 426.667s191.019 426.667 426.667 426.667 426.667-191.019 426.667-426.667S747.648 85.333 512 85.333z m0 768c-188.514 0-341.333-152.819-341.333-341.333s152.819-341.333 341.333-341.333 341.333 152.819 341.333 341.333-152.819 341.333-341.333 341.333z m42.667-469.333h-85.334v-85.333h85.334v85.333z m0 341.333h-85.334V469.333h85.334v341.333z" />
+                        <local:MyIconButton Width="24" Height="24" ToolTip="在 Wiki 查看电影相关情报" EventType="打开网页" EventData="https://zh.minecraft.wiki/" LogoScale="0.9" Foreground="#3288E6" Logo="M853.333 597.333v256c0 47.125-38.208 85.334-85.333 85.334H256c-47.125 0-85.333-38.209-85.333-85.334V341.333c0-47.125 38.208-85.333 85.333-85.333h256v85.333H256v512h512V597.333h85.333zM768 170.667v85.333h-174.933L840.533 503.467l-60.333 60.333L432.667 216.333V384H341.333V170.667H768z" />
+                    </StackPanel>
+                </Grid>
+            </StackPanel>
+            <TextBlock Height="1" Background="#EEEEEE" Margin="0,8,0,8" />
+
+            <StackPanel Margin="0,4">
+                <Grid Margin="0,0,0,6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text=" 基岩版 " Background="#3C9D40" Foreground="#FFFFFF" FontSize="13" Margin="0,0,8,0" VerticalAlignment="Center" />
+                    <TextBlock Grid.Column="1" Text="Minecraft Beta &amp; Preview - 26.30.25/26" FontSize="16" FontWeight="Bold" Foreground="#333333" VerticalAlignment="Center" TextTrimming="CharacterEllipsis" Margin="0,0,8,0" />
+                    <TextBlock Grid.Column="2" Text="2026-04-30" FontSize="13" Foreground="#999999" VerticalAlignment="Center" />
+                </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    
+                    <TextBlock Grid.Column="0" Foreground="#666666" FontSize="13" TextTrimming="CharacterEllipsis" Text="本次测试版重点修复了触控操作下视角容易发生漂移的严重问题，并对新加入的方块材质和碰撞箱进行了微调优化。" VerticalAlignment="Center" Margin="0,0,12,0" />
+                    
+                    <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
+                        <!-- 标准 24x24 弹窗按钮，配置为正确的 EventData -->
+                        <local:MyIconButton Width="24" Height="24" Margin="0,0,4,0" ToolTip="点击展开详情" EventType="弹出窗口" EventData="Minecraft Beta &amp; Preview - 26.30.25/26|本次测试版重点修复了触控操作下视角容易发生漂移的严重问题，并对新加入的方块材质和碰撞箱进行了微调优化。" LogoScale="0.9" Foreground="#777777" Logo="M512 85.333c-235.648 0-426.667 191.019-426.667 426.667s191.019 426.667 426.667 426.667 426.667-191.019 426.667-426.667S747.648 85.333 512 85.333z m0 768c-188.514 0-341.333-152.819-341.333-341.333s152.819-341.333 341.333-341.333 341.333 152.819 341.333 341.333-152.819 341.333-341.333 341.333z m42.667-469.333h-85.334v-85.333h85.334v85.333z m0 341.333h-85.334V469.333h85.334v341.333z" />
+                        <local:MyIconButton Width="24" Height="24" ToolTip="在 Wiki 查看完整更新日志" EventType="打开网页" EventData="https://zh.minecraft.wiki/" LogoScale="0.9" Foreground="#3288E6" Logo="M853.333 597.333v256c0 47.125-38.208 85.334-85.333 85.334H256c-47.125 0-85.333-38.209-85.333-85.334V341.333c0-47.125 38.208-85.333 85.333-85.333h256v85.333H256v512h512V597.333h85.333zM768 170.667v85.333h-174.933L840.533 503.467l-60.333 60.333L432.667 216.333V384H341.333V170.667H768z" />
+                    </StackPanel>
+                </Grid>
+            </StackPanel>
+            <TextBlock Height="1" Background="#EEEEEE" Margin="0,8,0,8" />
+
+            <StackPanel Margin="0,4">
+                <Grid Margin="0,0,0,6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text=" 逸闻 " Background="#2B65B7" Foreground="#FFFFFF" FontSize="13" Margin="0,0,8,0" VerticalAlignment="Center" />
+                    <TextBlock Grid.Column="1" Text="曾用于 Minecraft Xbox 平台的经典主视觉图发布重制版本" FontSize="16" FontWeight="Bold" Foreground="#333333" VerticalAlignment="Center" TextTrimming="CharacterEllipsis" Margin="0,0,8,0" />
+                    <TextBlock Grid.Column="2" Text="2026-04-30" FontSize="13" Foreground="#999999" VerticalAlignment="Center" />
+                </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    
+                    <TextBlock Grid.Column="0" Foreground="#666666" FontSize="13" TextTrimming="CharacterEllipsis" Text="为了纪念主机版本发售周年，官方当年的主笔画师亲自出马，将那张承载无数玩家青春回忆的经典封面进行了绝美的 4K 像素级重制。" VerticalAlignment="Center" Margin="0,0,12,0" />
+                    
+                    <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
+                        <!-- 标准 24x24 弹窗按钮，配置为正确的 EventData -->
+                        <local:MyIconButton Width="24" Height="24" Margin="0,0,4,0" ToolTip="点击展开详情" EventType="弹出窗口" EventData="曾用于 Minecraft Xbox 平台的经典主视觉图发布重制版本|为了纪念主机版本发售周年，官方当年的主笔画师亲自出马，将那张承载无数玩家青春回忆的经典封面进行了绝美的 4K 像素级重制。" LogoScale="0.9" Foreground="#777777" Logo="M512 85.333c-235.648 0-426.667 191.019-426.667 426.667s191.019 426.667 426.667 426.667 426.667-191.019 426.667-426.667S747.648 85.333 512 85.333z m0 768c-188.514 0-341.333-152.819-341.333-341.333s152.819-341.333 341.333-341.333 341.333 152.819 341.333 341.333-152.819 341.333-341.333 341.333z m42.667-469.333h-85.334v-85.333h85.334v85.333z m0 341.333h-85.334V469.333h85.334v341.333z" />
+                        <local:MyIconButton Width="24" Height="24" ToolTip="前往官网下载高清壁纸" EventType="打开网页" EventData="https://www.minecraft.net/" LogoScale="0.9" Foreground="#3288E6" Logo="M853.333 597.333v256c0 47.125-38.208 85.334-85.333 85.334H256c-47.125 0-85.333-38.209-85.333-85.334V341.333c0-47.125 38.208-85.333 85.333-85.333h256v85.333H256v512h512V597.333h85.333zM768 170.667v85.333h-174.933L840.533 503.467l-60.333 60.333L432.667 216.333V384H341.333V170.667H768z" />
+                    </StackPanel>
+                </Grid>
+            </StackPanel>
+            <TextBlock Height="1" Background="#EEEEEE" Margin="0,8,0,8" />
+
+            <StackPanel Margin="0,4">
+                <Grid Margin="0,0,0,6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text=" Java版 " Background="#EE1B2E" Foreground="#FFFFFF" FontSize="13" Margin="0,0,8,0" VerticalAlignment="Center" />
+                    <TextBlock Grid.Column="1" Text="Java版 26.2-snapshot-5 发布" FontSize="16" FontWeight="Bold" Foreground="#333333" VerticalAlignment="Center" TextTrimming="CharacterEllipsis" Margin="0,0,8,0" />
+                    <TextBlock Grid.Column="2" Text="2026-04-28" FontSize="13" Foreground="#999999" VerticalAlignment="Center" />
+                </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    
+                    <TextBlock Grid.Column="0" Foreground="#666666" FontSize="13" TextTrimming="CharacterEllipsis" Text="新快照继续针对底层渲染引擎进行深度优化，调整了部分红石线圈的充能判定逻辑，并修复了多人模式下偶尔出现的数据包丢失漏洞。" VerticalAlignment="Center" Margin="0,0,12,0" />
+                    
+                    <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
+                        <!-- 标准 24x24 弹窗按钮，配置为正确的 EventData -->
+                        <local:MyIconButton Width="24" Height="24" Margin="0,0,4,0" ToolTip="点击展开详情" EventType="弹出窗口" EventData="Java版 26.2-snapshot-5 发布|新快照继续针对底层渲染引擎进行深度优化，调整了部分红石线圈的充能判定逻辑，并修复了多人模式下偶尔出现的数据包丢失漏洞。" LogoScale="0.9" Foreground="#777777" Logo="M512 85.333c-235.648 0-426.667 191.019-426.667 426.667s191.019 426.667 426.667 426.667 426.667-191.019 426.667-426.667S747.648 85.333 512 85.333z m0 768c-188.514 0-341.333-152.819-341.333-341.333s152.819-341.333 341.333-341.333 341.333 152.819 341.333 341.333-152.819 341.333-341.333 341.333z m42.667-469.333h-85.334v-85.333h85.334v85.333z m0 341.333h-85.334V469.333h85.334v341.333z" />
+                        <local:MyIconButton Width="24" Height="24" ToolTip="在 Wiki 查看完整更新日志" EventType="打开网页" EventData="https://zh.minecraft.wiki/" LogoScale="0.9" Foreground="#3288E6" Logo="M853.333 597.333v256c0 47.125-38.208 85.334-85.333 85.334H256c-47.125 0-85.333-38.209-85.333-85.334V341.333c0-47.125 38.208-85.333 85.333-85.333h256v85.333H256v512h512V597.333h85.333zM768 170.667v85.333h-174.933L840.533 503.467l-60.333 60.333L432.667 216.333V384H341.333V170.667H768z" />
+                    </StackPanel>
+                </Grid>
+            </StackPanel>
+            <TextBlock Height="1" Background="#EEEEEE" Margin="0,8,0,8" />
+
+            <StackPanel Margin="0,4">
+                <Grid Margin="0,0,0,6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text=" 快讯 " Background="#EC1282" Foreground="#FFFFFF" FontSize="13" Margin="0,0,8,0" VerticalAlignment="Center" />
+                    <TextBlock Grid.Column="1" Text="TwitchCon 双披风样式公开" FontSize="16" FontWeight="Bold" Foreground="#333333" VerticalAlignment="Center" TextTrimming="CharacterEllipsis" Margin="0,0,8,0" />
+                    <TextBlock Grid.Column="2" Text="2026-04-22" FontSize="13" Foreground="#999999" VerticalAlignment="Center" />
+                </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    
+                    <TextBlock Grid.Column="0" Foreground="#666666" FontSize="13" TextTrimming="CharacterEllipsis" Text="可通过掉宝或线下参与 TwitchCon 领取，不同方式获取的披风样式存在细节差异，具体的活动参与规则与领取页面即将公布。" VerticalAlignment="Center" Margin="0,0,12,0" />
+                    
+                    <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
+                        <!-- 标准 24x24 弹窗按钮，配置为正确的 EventData -->
+                        <local:MyIconButton Width="24" Height="24" Margin="0,0,4,0" ToolTip="点击展开详情" EventType="弹出窗口" EventData="TwitchCon 双披风样式公开|可通过掉宝或线下参与 TwitchCon 领取，不同方式获取的披风样式存在细节差异，具体的活动参与规则与领取页面即将公布。" LogoScale="0.9" Foreground="#777777" Logo="M512 85.333c-235.648 0-426.667 191.019-426.667 426.667s191.019 426.667 426.667 426.667 426.667-191.019 426.667-426.667S747.648 85.333 512 85.333z m0 768c-188.514 0-341.333-152.819-341.333-341.333s152.819-341.333 341.333-341.333 341.333 152.819 341.333 341.333-152.819 341.333-341.333 341.333z m42.667-469.333h-85.334v-85.333h85.334v85.333z m0 341.333h-85.334V469.333h85.334v341.333z" />
+                        <local:MyIconButton Width="24" Height="24" ToolTip="前往 TwitchCon 官方了解详情" EventType="打开网页" EventData="https://www.twitch.tv/" LogoScale="0.9" Foreground="#3288E6" Logo="M853.333 597.333v256c0 47.125-38.208 85.334-85.333 85.334H256c-47.125 0-85.333-38.209-85.333-85.334V341.333c0-47.125 38.208-85.333 85.333-85.333h256v85.333H256v512h512V597.333h85.333zM768 170.667v85.333h-174.933L840.533 503.467l-60.333 60.333L432.667 216.333V384H341.333V170.667H768z" />
+                    </StackPanel>
+                </Grid>
+            </StackPanel>
+            <TextBlock Height="1" Background="#EEEEEE" Margin="0,8,0,8" />
+
+            <StackPanel Margin="0,4">
+                <Grid Margin="0,0,0,6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text=" 基岩版 " Background="#3C9D40" Foreground="#FFFFFF" FontSize="13" Margin="0,0,8,0" VerticalAlignment="Center" />
+                    <TextBlock Grid.Column="1" Text="Minecraft Beta &amp; Preview - 26.30.20/21" FontSize="16" FontWeight="Bold" Foreground="#333333" VerticalAlignment="Center" TextTrimming="CharacterEllipsis" Margin="0,0,8,0" />
+                    <TextBlock Grid.Column="2" Text="2026-04-21" FontSize="13" Foreground="#999999" VerticalAlignment="Center" />
+                </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    
+                    <TextBlock Grid.Column="0" Foreground="#666666" FontSize="13" TextTrimming="CharacterEllipsis" Text="主要针对低配移动端设备的内存占用进行了专项垃圾回收优化，显著提升了设备在加载复杂红石场景和密集实体时的帧率稳定性。" VerticalAlignment="Center" Margin="0,0,12,0" />
+                    
+                    <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
+                        <!-- 标准 24x24 弹窗按钮，配置为正确的 EventData -->
+                        <local:MyIconButton Width="24" Height="24" Margin="0,0,4,0" ToolTip="点击展开详情" EventType="弹出窗口" EventData="Minecraft Beta &amp; Preview - 26.30.20/21|主要针对低配移动端设备的内存占用进行了专项垃圾回收优化，显著提升了设备在加载复杂红石场景和密集实体时的帧率稳定性。" LogoScale="0.9" Foreground="#777777" Logo="M512 85.333c-235.648 0-426.667 191.019-426.667 426.667s191.019 426.667 426.667 426.667 426.667-191.019 426.667-426.667S747.648 85.333 512 85.333z m0 768c-188.514 0-341.333-152.819-341.333-341.333s152.819-341.333 341.333-341.333 341.333 152.819 341.333 341.333-152.819 341.333-341.333 341.333z m42.667-469.333h-85.334v-85.333h85.334v85.333z m0 341.333h-85.334V469.333h85.334v341.333z" />
+                        <local:MyIconButton Width="24" Height="24" ToolTip="在 Wiki 查看完整更新日志" EventType="打开网页" EventData="https://zh.minecraft.wiki/" LogoScale="0.9" Foreground="#3288E6" Logo="M853.333 597.333v256c0 47.125-38.208 85.334-85.333 85.334H256c-47.125 0-85.333-38.209-85.333-85.334V341.333c0-47.125 38.208-85.333 85.333-85.333h256v85.333H256v512h512V597.333h85.333zM768 170.667v85.333h-174.933L840.533 503.467l-60.333 60.333L432.667 216.333V384H341.333V170.667H768z" />
+                    </StackPanel>
+                </Grid>
+            </StackPanel>
+            <TextBlock Height="1" Background="#EEEEEE" Margin="0,8,0,8" />
+
+            <StackPanel Margin="0,4">
+                <Grid Margin="0,0,0,6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text=" Java版 " Background="#EE1B2E" Foreground="#FFFFFF" FontSize="13" Margin="0,0,8,0" VerticalAlignment="Center" />
+                    <TextBlock Grid.Column="1" Text="Java版 26.2-snapshot-4 发布" FontSize="16" FontWeight="Bold" Foreground="#333333" VerticalAlignment="Center" TextTrimming="CharacterEllipsis" Margin="0,0,8,0" />
+                    <TextBlock Grid.Column="2" Text="2026-04-21" FontSize="13" Foreground="#999999" VerticalAlignment="Center" />
+                </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    
+                    <TextBlock Grid.Column="0" Foreground="#666666" FontSize="13" TextTrimming="CharacterEllipsis" Text="加入了全新的洞穴群系环境混响音效，并对村庄的生成算法和房屋寻路逻辑进行了部分调整，让村民的行为更加自然流畅。" VerticalAlignment="Center" Margin="0,0,12,0" />
+                    
+                    <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
+                        <!-- 标准 24x24 弹窗按钮，配置为正确的 EventData -->
+                        <local:MyIconButton Width="24" Height="24" Margin="0,0,4,0" ToolTip="点击展开详情" EventType="弹出窗口" EventData="Java版 26.2-snapshot-4 发布|加入了全新的洞穴群系环境混响音效，并对村庄的生成算法和房屋寻路逻辑进行了部分调整，让村民的行为更加自然流畅。" LogoScale="0.9" Foreground="#777777" Logo="M512 85.333c-235.648 0-426.667 191.019-426.667 426.667s191.019 426.667 426.667 426.667 426.667-191.019 426.667-426.667S747.648 85.333 512 85.333z m0 768c-188.514 0-341.333-152.819-341.333-341.333s152.819-341.333 341.333-341.333 341.333 152.819 341.333 341.333-152.819 341.333-341.333 341.333z m42.667-469.333h-85.334v-85.333h85.334v85.333z m0 341.333h-85.334V469.333h85.334v341.333z" />
+                        <local:MyIconButton Width="24" Height="24" ToolTip="在 Wiki 查看完整更新日志" EventType="打开网页" EventData="https://zh.minecraft.wiki/" LogoScale="0.9" Foreground="#3288E6" Logo="M853.333 597.333v256c0 47.125-38.208 85.334-85.333 85.334H256c-47.125 0-85.333-38.209-85.333-85.334V341.333c0-47.125 38.208-85.333 85.333-85.333h256v85.333H256v512h512V597.333h85.333zM768 170.667v85.333h-174.933L840.533 503.467l-60.333 60.333L432.667 216.333V384H341.333V170.667H768z" />
+                    </StackPanel>
+                </Grid>
+            </StackPanel>
+        </StackPanel>
+    </local:MyCard>
+</StackPanel>
